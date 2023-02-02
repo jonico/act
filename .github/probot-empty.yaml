@@ -1,0 +1,17 @@
+# user comment to push the comment
+magicWords: deploy staging
+# files needed
+requiredFiles: [.circleci/config.yml, config/scripts/deploy-staging]
+messages: 
+  # Message if bot can push a commit
+  appEnabled: Hello there, I'll make an empty commit whenever you comment `<%= magicWords %>` in this PR.
+  # Message if bot can't push a commit
+  appDisabled: Hello there, I will not be able to help you until these file(s) are present -> `<%= files %>`
+  # Message if required file(s) is/are not present
+  fileNotPresent: I need the following files in order to make an empty commit. `<%= files %>`
+  # Message if the comment contains the message but also other characters
+  exact: If you want me to make an empty commit just type `<%= magicWords %>`, and nothing else.
+  # Bot comment after pushing the empty commit
+  trigger: Pushing the empty commit...
+  # Commit message
+  commit: Empty commit
