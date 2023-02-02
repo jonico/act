@@ -1,7 +1,5 @@
 # user comment to push the comment
 magicWords: deploy staging
-# files needed
-requiredFiles: [.circleci/config.yml, config/scripts/deploy-staging]
 messages: 
   # Message if bot can push a commit
   appEnabled: Hello there, I'll make an empty commit whenever you comment `<%= magicWords %>` in this PR.
